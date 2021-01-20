@@ -1,6 +1,16 @@
 """
 Let's consider that you have a online platform offering various services.
 And you have calculated a count of services being used by each user and stored it in a dictionary format.
+{'usr1': 1, 'usr2': 6, 'usr3': 5, 'usr4': 5, 'usr5': 4, 'usr6': 6, 'usr7': 0}
+
+Now you want to know the users according to the counts so as to get the clear idea of the usage of the services.
+{0: [1, 'usr7'], 1: [1, 'usr1'], 4: [1, 'usr5'], 5: [2, 'usr3', 'usr4'], 6: [2, 'usr2', 'usr6']}
+Where key '0' consists of the users with no active services and the first value of the list of values is the count of
+total number of users in the list.
+
+To achieve that, we will first use the count values in the original dictionary as the keys in the output where if a
+count value is observed again the related user will be put in the list associated with the count key and the number of
+users (first item of the list) will be updated.
 """
 
 # Generating Data for the demonstration
